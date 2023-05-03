@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('templates/head'); %>
+</head>
+
+<body >
+
+    <header>
+        <%- include('templates/header'); %> 
+    </header>
+
+    <main>
+        <div class="container-login">
+            <form name="loginForm" action="/sample" class="login-form" onsubmit="return loginAccount()">
+            <h2 class="login-title">Login</h2>
+            <label for="email">Email</label>
+            <div class="login-box">
+                <input type="email" name="email" placeholder="Enter email" required />
+            </div>
+            <label for="password">Password</label>
+            <div class="login-box">
+                <input type="password" name="password" placeholder="Enter password" required />
+            </div>
+            <button type="submit" class="login_btn">Login</button>
+            <a href="/signup">Sign up</a>
+            </form>
+        </div>
+        <script>
+            function loginAccount() {
+              let email = document.forms['loginForm']['email'].value;
+              let password = document.forms['loginForm']['password'].value;
+        
+              var user = localStorage.getItem(email);
+              var data = JSON.parse(user);
+        
+              if (user == null || password != data.password) {
+                alert('Incorrect email or password');
+                return false;
+              } else if (email == data.email && password == data.password) {
+                alert(`Welcome back ${data.firstName}!`);
+                localStorage.setItem('signedInUser', user);
+                return true;
+              }
+            }
+          </script>
+    </main>
+
+    <footer>
+        <%- include('templates/footer'); %>
+    </footer>
+  
+ </body>
+</html>

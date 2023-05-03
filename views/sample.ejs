@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('templates/head'); %>
+</head>
+
+<body class="container">
+
+<header>
+  <%- include('templates/header'); %>
+</header>
+
+<main>
+  <div class="container app">
+    <div class="row app-one">
+      <div class="col-sm-4 side">
+        <div class="side-one">
+          <div class="row heading">
+            <div class="col-sm-3 col-xs-3">
+              <div class="heading-avatar-icon-bars">
+                <i class="uil uil-bars" onclick="openNav()" ></i>
+              </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+              <a href="#"><img src="https://nationaltoday.com/wp-content/uploads/2022/10/47-Chen.jpg"> <h5>Kim Jong Dae</h5> </a>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#"><i class="uil uil-comment"></i> <h4>Chats</h4> </a>
+              <a href="#"><i class="uil uil-store"></i> <h4>Marketplace</h4> </a>
+              <a href="#"><i class="uil uil-envelope-star"></i> <h4>Message requests</h4> </a>
+              <a href="#"><i class="uil uil-archive"></i> <h4>Archive</h4> </a>
+            </div>
+
+            <div class="col-sm-2 col-xs-2 heading-compose">
+              <h4>Telegram</h4>
+            </div>
+
+            <div class="col-sm-1 col-xs-1  heading-search  pull-right">
+              <i class="uil uil-search" aria-hidden="true" ></i>
+            </div>
+
+          </div>
+  
+          <div class="row searchBox">
+            <div class="col-sm-12 searchBox-inner">
+              <div class="form-group has-feedback">
+                <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+              </div>
+            </div>
+          </div>
+  
+          <div class="row sideBar">
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://i.pinimg.com/originals/e1/04/e1/e104e1727c676f17746760b48613dc1d.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">HaeIn
+                    </span>
+                    <p>HaeIn says hi.</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">
+                      <i class="uil uil-check"></i><i class="uil uil-check"></i>
+                      18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row sideBar-body active">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://nationaltoday.com/wp-content/uploads/2022/10/47-Chen.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Chennniee
+                  </span>
+                  <p>I'll treat you drinks</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1208811098.jpg?crop=0.554xw:0.371xh;0.228xw,0.0427xh&resize=1200:*">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Naomi Scott
+                  </span>
+                  <p>Let's Party</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://image.kpopmap.com/2019/03/SuHo_profile_s_0220.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Oppa Suho
+                  </span>
+                  <p>Tomorrow at the same place</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://e0.pxfuel.com/wallpapers/363/418/desktop-wallpaper-lee-dong-wook-lee-dong-wook-lee-dong-wook-thumbnail.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Brother
+                  </span>
+                  <p>I've just got my new car</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">
+                      <i class="uil uil-check"></i><i class="uil uil-check"></i>
+                      18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://i.mydramalist.com/250rk_5_c.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nam Joo Hyuk
+                  </span>
+                  <p>Hey, Let's hangout</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://i.mydramalist.com/vP7OW_5f.jpg">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Hu Yi Tian
+                  </span>
+                  <p>We have plans today, come and joy us</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">
+                      <i class="uil uil-check"></i><i class="uil uil-check"></i>
+                      18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://kpopping.com/documents/c9/5/800/GOT7-MARK-TUAN-for-SINGLES-Magazine-Korea-June-Issue-2022-documents-1.jpeg?v=2ab59">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Mark Tuan
+                  </span>
+                  <p>Hope to see you soon!</p>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">
+                      <i class="uil uil-check"></i><i class="uil uil-check"></i>
+                      18:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="new-message">
+              <a href="#"><i class="uil uil-pen"></i></a>
+            </div>
+
+          </div>
+        </div>  
+      </div>
+  
+      <div class="col-sm-8 conversation">
+        <div class="row heading">
+          <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar2">
+            <div class="heading-times">
+              <i class="uil uil-times"></i>
+            </div>
+            <div class="heading-avatar-icon">
+              <img src="https://nationaltoday.com/wp-content/uploads/2022/10/47-Chen.jpg">
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-7 heading-name">
+            <a class="heading-name-meta">Chennniee</a>
+            <p>2,768 members, 490 online</p>
+            <span class="heading-online">Online</span>
+          </div>
+          <div id="action_menu_btn" class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+          <div class="action_menu">
+            <div class="profile">
+              <img src="https://nationaltoday.com/wp-content/uploads/2022/10/47-Chen.jpg">
+              <h3>Kim Jong Dae</h3>
+              <div class="profile-icons">
+                <a href="#" class="Audio"><i class="fa fa-phone"></i><h5>Audio</h5></a>
+                <a href="#" class="Video"><i class="fa fa-video"></i><h5>Video</h5></a>
+                <a href="#" class="Profile"><i class="fa fa-user"></i><h5>Profile</h5></a>
+                <a href="#" id="action-mute" class="Mute"><i class="fa fa-bell-slash"></i><h5>Mute</h5></a>
+              </div>
+            </div>
+            <ul>
+              <li><i class="fa fa-image"></i> View media,files & links</li>
+              <li><i class="fas fa-users"></i> Add to close friends</li>
+              <li><i class="fas fa-plus"></i> Add to group</li>
+              <li><i class="fas fa-ban"></i> Block</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="profile-mute">
+          <h2>Mute this chat?</h2>
+          <label>
+            <input type="radio" class="option-input radio" name="example">
+            <p>Mute message notification</p>
+          </label>
+          <label>
+            <input type="radio" class="option-input radio" name="example">
+              <p>Mute call notifications</p>
+          </label>
+          <label>
+            <input type="radio" class="option-input radio" name="example">
+            <p>Mute message and call notifications</p>
+          </label>
+          <button>OK</button>
+        </div>
+
+        <div class="row message" id="conversation">
+          <div class="row message-previous">
+            <div class="col-sm-12 previous">
+              <a onclick="previous(this)" id="ankitjain28" name="20">
+              Show Previous Message!
+              </a>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="avatar-icon-receive">
+              <img src="https://nationaltoday.com/wp-content/uploads/2022/10/47-Chen.jpg">
+            </div>
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                <h5>Dave</h5>
+                  I'll treat you drinks
+                </div>
+                <span class="message-time pull-right">
+                  Sun
+                </span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  Thanks oppa, see you!
+                </div>
+                <span class="message-time pull-right">
+                  Sun
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row reply">
+          <div class="col-sm-1 col-xs-1 reply-emojis">
+            <i class="fa fa-smile-o fa-2x"></i>
+          </div>
+          <div class="col-sm-1 col-xs-1 reply-recording">
+            <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col-sm-1 col-xs-1 reply-file">
+            <i class="uil uil-file"  aria-hidden="true"></i>
+          </div>
+          <div class="col-sm-9 col-xs-9 reply-main">
+            <textarea class="form-control" rows="1" id="comment" placeholder="Type your message..."></textarea>
+          </div>
+          <div class="col-sm-1 col-xs-1 reply-send">
+            <i class="fa fa-send fa-2x" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  $(function(){
+    $(".heading-compose").click(function() {
+      $(".side-two").css({
+        "left": "0"
+      });
+    });
+
+    $(".newMessage-back").click(function() {
+      $(".side-two").css({
+        "left": "-100%"
+      });
+    });
+  })
+
+
+$(document).ready(function(){
+	$('#action_menu_btn').click(function(){
+	$('.action_menu').toggle();
+	});
+	});
+
+  $(document).ready(function(){
+	$('#action-mute').click(function(){
+	$('.profile-mute').toggle();
+	});
+	});
+
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  }
+  function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+<footer>
+  <%- include('templates/footer'); %>
+</footer>
+
+</body>
+</html>

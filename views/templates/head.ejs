@@ -1,0 +1,1219 @@
+<meta charset="UTF-8">
+<title>Messaging App</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+}
+
+
+/*================CSS FOR BODY====================*/
+html,
+body,
+div,
+span {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("http://shurl.esy.es/y") no-repeat fixed center;
+  background-size: cover;
+  font-family: var(--body-font);
+}
+.fa-2x {
+  font-size: 1.5em;
+}
+.app {
+  position: relative;
+  overflow: hidden;
+  height: calc(100% - 38px);
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+.app-one {
+  background-color: #f7f7f7;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+.side {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.side-one {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  display: block;
+  top: 0;
+  overflow: hidden;
+}
+.side-two {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  top: -100%;
+  left: -100%;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+}
+/*================CSS FOR BODY====================*/
+
+
+/*================CSS FOR LEFT HEADING/ row heading====================*/
+.heading {
+  margin: 0;
+  height: 55px;
+  width: 100%;
+  background-color: #226d91;
+  color: white;
+  z-index: 1000;
+}
+.heading-avatar-icon-bars i{
+  font-size: 2.5rem;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  margin-left: 10px;
+}
+.heading-compose {
+  padding: 10px;
+  width: 30%;
+}
+.heading-compose h4 {
+  font-family: var(--body-font);
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 700;
+}
+.heading-search{
+  padding: 10px;
+  margin-top: 4px;
+}
+.heading-search i{
+  font-size: 2rem;
+  margin-left: -10px;
+}
+.sidenav {
+  height: 95vh;
+  width: 0%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  background-color: #313030;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 15px;
+  text-decoration: none;
+  color: #818181;
+  display: flex;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  background-color: #1f1d1dbb;
+  cursor: pointer;
+}
+.sidenav a img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.sidenav a h5{
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 1.5rem;
+  margin-top: 1.6rem;
+  color: white;
+}
+.sidenav i{
+  font-size: 20px;
+  color: white;
+  background-color: #201f1f;
+  padding: 5px 10px;
+  border-radius: 25%;
+}
+.sidenav h4{
+  margin-left: 2rem;
+  font-size: 16px;
+  color: white;
+}
+.sidenav .closebtn{
+  position: absolute;
+  font-size: 35px;
+  font-weight: 500;
+  top: 0px;
+  right: 0px;
+  margin-left: 50px;
+  width: 45px;
+  height: 60px;
+  color: white;
+}
+
+/*
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*================CSS FOR LEFT HEADING/ row heading====================*/
+
+
+/*================CSS FOR RIGHT HEADING====================*/
+.heading-times{
+  margin-left: -10px;
+  font-size: 2.7rem;
+  margin-top: 5px;
+}
+.heading-avatar1 {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+}
+.heading-avatar2 {
+  width: 15%;
+  margin-left: 20px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+}
+.heading-avatar-icon img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.heading-name {
+  padding: 0 !important;
+  cursor: pointer;
+  position: absolute;
+}
+.heading-name-meta {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 12.5rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+  display: block;
+}
+.heading p{
+  font-size: 12px;
+  margin-left: 12.5rem;
+  margin-top: -3px;
+}
+.heading-online {
+  display: none;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #93918f;
+}
+.heading-dot {
+  padding: 10px;
+}
+.heading-dot i {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+.action_menu{
+	z-index: 1;
+	position: absolute;
+	padding: 15px 0;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border-radius: 15px;
+	top: 30px;
+	right: 15px;
+  width: 50%;
+	display: none;
+}
+.profile{
+  padding-top: 2.5rem;
+  text-align: center;
+  height: 40vh;
+}
+.profile img{
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+.profile h3{
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.profile-icons a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+}
+.profile-icons a i{
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #201f1fbd;
+}
+.profile-icons a i:hover{
+  background-color: rgba(255, 255, 255, 0.651);
+  color: #000;
+}
+.profile-icons a h5{
+  color: white;
+}
+
+
+.profile-mute{
+	z-index: 5;
+	position: absolute;
+	padding: 2px 20px;
+	background-color: rgb(37, 35, 35);
+	color: white;
+	border-radius: 15px;
+  margin-top: 25rem;
+	right: 15px;
+  width: 50%;
+  height: 37%;
+	display: none;
+}
+.profile-mute h2{
+  font-size: 20px;
+  font-weight: 600;
+}
+.profile-mute label{
+  display: flex;
+}
+.profile-mute label p{
+  margin-left: 1.5rem;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.option-input:checked::after{
+  animation: click-wave 0.75s;
+  background: rgb(81, 105, 105);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+@keyframes click-wave{
+    0%{
+        height: 20px;
+        width: 20px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100%{
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }  
+}
+.option-input{
+    position: relative;
+    top: 6px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    color: rgb(243, 219, 188);
+    cursor: pointer;
+    z-index: 1000;
+}
+.option-input:hover{
+    background-color: rgb(145, 240, 232);
+}
+.profile-mute button{
+  float: right;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  color: #464545;
+  background: none;
+}
+.profile-mute button:hover{
+  color: white;
+}
+
+.action_menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.action_menu ul li{
+	width: 100%;
+	padding: 10px 15px;
+	margin-bottom: 5px;
+}
+.action_menu ul li i{
+	padding-right: 10px;
+}
+.action_menu ul li:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.searchBox {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 60px;
+  width: 100%;
+}
+.searchBox-inner {
+  height: 100%;
+  width: 100%;
+  padding: 10px !important;
+  background-color: #fbfbfb;
+}
+/*================CSS FOR RIGHT HEADING====================*/
+
+/*#searchBox-inner input {
+  box-shadow: none;
+}*/
+
+
+/*================CSS FOR USER/ row sideBar====================*/
+.searchBox-inner input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.sideBar {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #fff;
+  overflow-y: auto;
+  border: 1px solid #f7f7f7;
+  height: 500px;
+}
+.sideBar-body {
+  position: relative;
+  padding: 10px !important;
+  border-bottom: 1px solid #f7f7f7;
+  height: 72px;
+  margin: 0 !important;
+  cursor: pointer;
+  overflow-y: auto;
+	white-space: nowrap;
+}
+.active{
+  background-color: rgba(0,0,0,0.3);
+}
+.sideBar-body:hover {
+  background-color: #f2f2f2;
+}
+.sideBar-avatar {
+  text-align: center;
+  padding: 0 !important;
+}
+.avatar-icon img {
+  border-radius: 50%;
+  height: 49px;
+  width: 49px;
+}
+.sideBar-main {
+  padding: 0 !important;
+}
+.sideBar-main .row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.sideBar-name {
+  padding: 10px !important;
+  overflow: hidden;
+}
+.name-meta {
+  font-size: 100%;
+  padding: 1% !important;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+.sideBar-time {
+  padding: 10px !important;
+}
+.time-meta {
+  text-align: right;
+  font-size: 12px;
+  padding: 1% !important;
+  color: rgba(0, 0, 0, .4);
+  vertical-align: baseline;
+}
+.time-meta i{
+  margin-left: -1.2rem;
+  font-size: 17px;
+  color: #23aa67;
+}
+.new-message{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #226d91;
+  margin-left: 23%;
+  margin-top: -14.5rem;
+  position: fixed;
+  text-align: center;
+  padding-top: 0.6rem;
+}
+.new-message a{
+  font-size: 2.5rem;
+  color: white;
+}
+/*================CSS FOR USER/ row sideBar====================*/
+
+/*================CSS FOR NEW MESSAGE====================*/
+.newMessage {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+  position: relative;
+  left: -100%;
+}
+.newMessage-heading {
+  padding: 10px 16px 10px 15px !important;
+  margin: 0 !important;
+  height: 100px;
+  width: 100%;
+  background-color: #00bfa5;
+  z-index: 1001;
+}
+.newMessage-main {
+  padding: 10px 16px 0 15px !important;
+  margin: 0 !important;
+  height: 60px;
+  margin-top: 30px !important;
+  width: 100%;
+  z-index: 1001;
+  color: #fff;
+}
+.newMessage-title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 5px !important;
+}
+.newMessage-back {
+  text-align: center;
+  padding: 12px 5px !important;
+  display: block;
+  cursor: pointer;
+}
+.newMessage-back i {
+  margin: auto !important;
+}
+
+.composeBox {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 60px;
+  width: 100%;
+}
+.composeBox-inner {
+  height: 100%;
+  width: 100%;
+  padding: 10px !important;
+  background-color: #fbfbfb;
+}
+.composeBox-inner input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.compose-sideBar {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #fff;
+  overflow-y: auto;
+  border: 1px solid #f7f7f7;
+  height: calc(100% - 160px);
+}
+/*================CSS FOR NEW MESSAGE====================*/
+
+
+/*================CSS FOR CONVERSATION====================*/
+.conversation {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 97vh;
+  /*width: 100%;*/
+  /*overflow-y: auto;*/
+}
+.message {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: url("w.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow-y: auto;
+  border: 1px solid #f7f7f7;
+  height: calc(100% - 120px);
+}
+.message-previous {
+  margin : 0 !important;
+  padding: 0 !important;
+  height: auto;
+  width: 100%;
+}
+.previous {
+  font-size: 15px;
+  text-align: center;
+  padding: 10px !important;
+  cursor: pointer;
+}
+.previous a {
+  text-decoration: none;
+  font-weight: 700;
+}
+.message-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto;
+  height: auto;
+  display: flex;
+}
+.avatar-icon-receive{
+  width: 10%;
+  text-align: center;
+  padding-top: 1rem;
+}
+.avatar-icon-receive img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.message-main-receiver {
+  /*padding: 10px 20px;*/
+  max-width: 60%;
+  margin-left: -2rem;
+}
+.message-main-sender {
+  padding: 3px 20px !important;
+  margin-left: 40% !important;
+  max-width: 60%;
+}
+.message-text {
+  margin: 0 !important;
+  padding: 5px !important;
+  word-wrap:break-word;
+  font-weight: 200;
+  font-size: 14px;
+  padding-bottom: 0 !important;
+}
+.message-time {
+  margin-right: 5px;
+  font-size: 12px;
+  text-align: right;
+  color: #9a9a9a;
+}
+.receiver {
+  width: auto !important;
+  padding: 4px 10px 7px !important;
+  border-radius: 10px 10px 10px 0;
+  background: #ffffff;
+  font-size: 12px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  word-wrap: break-word;
+  display: inline-block;
+}
+.receiver h5{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.sender {
+  width: auto !important;
+  float: right;
+  background: #dcf8c6;
+  border-radius: 10px 10px 0 10px;
+  padding: 4px 10px 7px !important;
+  font-size: 12px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+/*================CSS FOR CONVERSATION====================*/
+
+
+/*================CSS FOR REPLY====================*/
+.reply {
+  height: 55px;
+  width: 100%;
+  background-color: white;
+  padding: 5px 5px 10px 5px !important;
+  margin-top: 1rem;
+  margin: 0;
+  z-index: 1000;
+}
+.reply-emojis {
+  padding: 5px !important;
+  padding-left: 5px;
+}
+.reply-emojis i {
+  text-align: center;
+  padding: 5px 5px 5px 5px !important;
+  color: #74716e;
+  cursor: pointer;
+}
+.reply-recording {
+  padding: 5px !important;
+  margin-left: -20px;
+}
+.reply-recording i {
+  text-align: center;
+  padding: 5px !important;
+  color: #74716e;
+  cursor: pointer;
+}
+.reply-file{
+  padding: 5px !important;
+  width: 5%;
+  margin-left: -2.5rem;
+  margin-top: -0.2rem;
+}
+.reply-file i{
+  font-size: 2.5rem;
+  color: #74716e;
+  cursor: pointer;
+}
+.reply-send {
+  padding: 5px !important;
+  margin-left: 0.5rem;
+}
+.reply-send i {
+  padding: 5px !important;
+  color: #74716e;
+  cursor: pointer;
+}
+.reply-main {
+  padding: 2px 5px !important;
+}
+.reply-main textarea {
+  background-color: rgb(247, 243, 243);
+  width: 100%;
+  resize: none;
+  padding: 5px !important;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: #000;
+  height: 100%;
+  font-size: 16px;
+}
+.reply-main textarea:focus {
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: none;
+}
+/*================CSS FOR REPLY====================*/
+
+/*================CSS FOR Media Screen (400, 500, 600, 700, 800)====================*/
+@media screen and (max-width: 700px) {
+  html,
+  body,
+  div,
+  span {
+    overflow: hidden;
+  }
+  .app {
+    top: 0;
+    height: 100%;
+  }
+  .heading {
+    height: 55px;
+    background-color: #226d91;
+  }
+  .fa-2x {
+    font-size: 2.3em !important;
+  }
+  .heading-avatar {
+    padding: 0 !important;
+  }
+  .heading-avatar-icon img {
+    height: 50px;
+    width: 50px;
+  }
+  .heading-compose {
+    padding: 5px !important;
+  }
+  .heading-compose h4 {
+    margin-top: 12px;
+  }
+  .heading-compose i {
+    color: #fff;
+    cursor: pointer;
+  }
+  .heading-dot {
+    padding: 5px !important;
+    margin-left: 10px !important;
+  }
+  .heading-dot i {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /*================CSS FOR HAMBURGER====================*/
+  .sidenav {
+    z-index: 1000;
+  }
+  /*================CSS FOR HAMBURGER====================*/
+
+  .sideBar {
+    height: 600px;
+  }
+  .sideBar-body {
+    height: 80px;
+  }
+  .sideBar-avatar {
+    text-align: left;
+    padding: 0 8px !important;
+  }
+  .avatar-icon img {
+    height: 55px;
+    width: 55px;
+  }
+  .sideBar-main {
+    padding: 0 !important;
+  }
+  .sideBar-main .row {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .sideBar-name {
+    padding: 10px 5px !important;
+  }
+  .sideBar-name p{
+    margin-left: 1rem;
+  }
+  .name-meta {
+    font-size: 16px;
+    padding: 5% !important;
+  }
+  .sideBar-time {
+    padding: 10px !important;
+  }
+  .new-message{
+    margin-top: -19rem;
+    margin-left: 76%;
+  }
+  .time-meta {
+    text-align: right;
+    font-size: 14px;
+    padding: 4% !important;
+    color: rgba(0, 0, 0, .4);
+    vertical-align: baseline;
+  }
+  /*Conversation*/
+  .conversation {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 97vh;
+    /*width: 100%;*/
+    border-left: 1px solid rgba(0, 0, 0, .08);
+    /*overflow-y: auto;*/
+  }
+  .message {
+    height: calc(100% - 140px);
+  }
+  .reply {
+    height: 70px;
+  }
+  .reply-emojis {
+    padding: 5px 0 !important;
+  }
+  .reply-emojis i {
+    padding: 5px 2px !important;
+    font-size: 1.8em !important;
+  }
+  .reply-main {
+    padding: 2px 8px !important;
+  }
+  .reply-main textarea {
+    padding: 8px !important;
+    font-size: 18px;
+  }
+  .reply-recording {
+    padding: 5px 0 !important;
+  }
+  .reply-recording i {
+    padding: 5px 0 !important;
+    font-size: 1.8em !important;
+  }
+  .reply-send {
+    padding: 5px 0 !important;
+  }
+  .reply-send i {
+    padding: 5px 2px 5px 0 !important;
+    font-size: 1.8em !important;
+  }
+}
+
+
+@media screen and (max-width: 800px){
+  .new-message{
+    margin-top: -19rem;
+    margin-left: 85%;
+  }
+  html,
+  body,
+  div,
+  span {
+    overflow: hidden;
+  }
+  .sideBar {
+    height: 600px;
+  }
+  .sideBar-body {
+    height: 80px;
+  }
+} 
+
+@media screen and (max-width: 400px){
+  .new-message{
+    margin-top: -19rem;
+    margin-left: 72%;
+  }
+} 
+
+@media screen and (max-width: 500px){
+  .new-message{
+    margin-top: -19rem;
+    margin-left: 75%;
+  }
+} 
+
+@media screen and (max-width: 600px){
+  .new-message{
+    margin-top: -19rem;
+    margin-left: 82%;
+  }
+} 
+/*================CSS FOR Media Screen (400, 500, 600, 700, 800)====================*/
+
+
+
+/* login */
+
+.fa {
+	font-size: 28px;
+	padding: 0 0.2em;
+}
+
+.container-login {
+	margin-top: 4em;
+	padding-top: 5em;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.login-form {
+	height: 380px;
+	width: 34%;
+	padding: 1em 2em;
+	border: 1px solid gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 8px #000000b3;
+}
+
+.login-title {
+	margin: 0 0 0.5em;
+	font-size: 2.3rem;
+}
+
+.login-box {
+	border: 1px solid gray;
+	margin: 0.4em 0 2em;
+	padding: 9px 15px;
+	border-radius: 8px;
+}
+
+.login-box label {
+	display: block;
+	text-align: left;
+	color: #333;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-style: bold;
+}
+
+.login-box input,
+.login-box textarea {
+	font-family: "Montserrat", sans-serif;
+	width: 100%;
+  font-size: 1.05rem;
+	border: none;
+	background: none;
+	outline: none;
+	margin-top: 6px;
+	resize: none;
+}
+
+.login_btn {
+	align-self: center;
+  background-color: #226d91; 
+	color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+	border-color: 2px solid white;
+	padding: 0.6em 1em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-family: "Montserrat", sans-serif;
+	margin: 4px 2px;
+	margin-bottom: none;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border: 1px solid gray;
+	border-radius: 18px
+}
+
+.login_btn:hover {
+	background-color: gray;
+	color: white;
+}
+
+.login_btn a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a[href="/signup"] {
+  text-align: center;
+  text-decoration: none;
+  color: #226d91;
+}
+
+a[href="/signup"]:hover, a[href="/sample"] {
+  text-decoration: underline;
+}
+
+/* signup form */
+.container-signup {
+  padding-top: 5rem;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  padding-bottom: 0.4em;
+}
+
+.signup-form {
+  height: 100%;
+	width: 76%;
+  padding: 0.8em;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 8px #000000b3;
+}
+
+.row-form {
+  height: 380px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.row-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.7em;
+}
+
+a[href="/login"] {
+  text-align: center;
+  text-decoration: none;
+  color: #226d91;
+}
+
+a[href="/login"]:hover {
+  text-decoration: underline;
+}
+
+.personal-info, .signin-info {
+  height: 60px;
+  width: 45%;
+}
+
+/* Front Page */
+
+.front__page{
+  background-color: #0b3447f8;
+}
+.hero {
+    width: 100%;
+    margin-top: 4rem;
+	  padding-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  
+  
+  .hero__subtitle {
+    color:#020c1d;
+    font-size: 1rem;
+    line-height: 0.9;
+  }
+  
+  .hero__title {
+    color: #226d91;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+  }
+  
+  
+  
+  .hero__btn {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    
+  }
+  .btn__front{
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  color: #f1f5f9;
+  background-color: #f1f5f9;;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(81, 37, 184, 0.541),
+    0 6px 6px rgba(109, 37, 177, 0.603), 0 0 100px -10px #36a2d4b4;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+  /* xs */
+  @media (min-width: 475px) {
+    .hero {
+      gap: 1.5rem;
+    }
+  
+    
+  
+    .hero__subtitle {
+      font-size: 1.125rem;
+    }
+  
+    .hero__title {
+      font-size: 3rem;
+    }
+  
+   
+  
+    .hero__btn {
+      font-size:  1rem;
+    }
+  }
+  
+  /* sm */
+  /* @media (min-width: 640px) {} */
+  
+  /* md */
+  /* @media (min-width: 768px) {} */
+  
+  /* lg */
+  @media (min-width: 1024px) {
+    
+  
+    .hero__subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .hero__title {
+      font-size: 4.5rem;
+    }
+  
+   
+  
+    .hero__btn {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* xl */
+  @media (min-width: 1280px) {
+    .hero {
+      gap: 2rem;
+    }
+  
+   
+  
+    .hero__subtitle {
+      font-size: 2.25rem;
+    }
+  
+    .hero__title {
+      font-size: 8rem;
+    }
+  
+    
+  
+    .hero__btn {
+      font-size:1.6rem;
+    }
+  }
+
+</style>
